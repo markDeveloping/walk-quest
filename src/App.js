@@ -1,27 +1,36 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Logo from "./img/wq-logo.PNG";
 
 const BasicExample = () => (
   <Router>
     <div>
+    <div class="logo">
+    <img src={Logo} />
+    </div>
+      <nav>
       <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/geocaching">Geocaching</Link>
         </li>
         <li>
-          <Link to="/topics">Topics</Link>
+          <Link to="/find">Find and seek</Link>
         </li>
+        <li>
+          <Link to="/walks">Manage walks</Link>
+        </li>
+
       </ul>
+      </nav>
 
       <hr />
 
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
+      <Route path="/walks" component={walks} />
     </div>
   </Router>
 );
@@ -29,42 +38,20 @@ const BasicExample = () => (
 const Home = () => (
   <div>
     <h1>Home</h1>
+    <div class="column-8 feature">
+    <div class="img-column-4">
+      <img src="http://via.placeholder.com/200x200" alt="Placeholder image" />
+    </div>
+    <div class="column-8">
+      <p>Making walks more exciting, for kids and big kids.</p>
+    </div>
+    </div>
   </div>
 );
 
-const About = () => (
+const walks = () => (
   <div>
-    <h1>About</h1>
-  </div>
-);
-
-const Topics = ({ match }) => (
-  <div>
-    <h1>Topics</h1>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h3>Please select a topic.</h3>}
-    />
-  </div>
-);
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
+    <h1>Manage walks</h1>
   </div>
 );
 

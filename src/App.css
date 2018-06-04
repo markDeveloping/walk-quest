@@ -1,32 +1,125 @@
 /* application colours: yellow: F0CA4D, black: 324D5C, red: DE5B49, Green: 46B29D, Orange: E37B40 */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important; }
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+.wrapper:after,
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+[class*='column-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px; }
+
+[class*='img-column-'] {
+  float: left;
+  padding: 0;
+  width: 100%;
+  min-height: 1px; }
+
+@media only screen and (min-width: 30em) {
+  .wrapper {
+    width: 95%;
+    max-width: 65em; }
+  .column-1 {
+    width: 8.33333%; }
+  .column-2 {
+    width: 16.66667%; }
+  .column-3 {
+    width: 25%; }
+  .column-4 {
+    width: 33.33333%; }
+  .img-column-4 {
+    width: 33.33333%; }
+  .column-5 {
+    width: 41.66667%; }
+  .column-6 {
+    width: 50%; }
+  .column-7 {
+    width: 58.33333%; }
+  .column-8 {
+    width: 66.66667%; }
+  .column-9 {
+    width: 75%; }
+  .column-10 {
+    width: 83.33333%; }
+  .column-11 {
+    width: 91.66667%; }
+  .column-12 {
+    width: 100%; } }
+
 body {
   font-family: 'Questrial', sans-serif; }
 
 h1 {
   font-family: 'Arvo', serif;
-  font-size: 42px; }
+  font-size: 42px;
+  padding-top: 50px; }
 
 .feature {
-  font-family: 'Quicksand', sans-serif; }
+  font-family: 'Quicksand', sans-serif;
+  font-size: 46px; }
 
-.App {
-  text-align: center; }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff; }
+  nav ul li {
+    float: left; }
+    nav ul li a {
+      display: block;
+      color: #324D5C;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; }
+  nav ul li a:hover {
+    background-color: #324D5C;
+    color: #ffffff; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%; }
 
-.App-header {
-  background-color: #E37B40;
-  height: 150px;
-  padding: 20px;
-  color: white; }
+.feature {
+  background-color: #F0CA4D;
+  margin-top: 80px; }
 
-.App-title {
-  font-size: 1.5em; }
+.feature img {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  top: -85px; }
 
-.App-intro {
-  font-size: large; }
+.full-page {
+  border-top: 20px solid #46B29D; }
 
 @keyframes App-logo-spin {
   from {
