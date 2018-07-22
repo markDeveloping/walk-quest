@@ -1,0 +1,31 @@
+.walk-card {
+	border: 1px solid $grey;
+	border-radius: 0.2em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	overflow: auto;
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+img {
+	float: left;
+}
+
+}
+.walk-details {
+	padding: 15px;
+	display: block;
+	margin-left: 160px;
+}
+
+.walk-title {
+	font-size: 24px;
+	font-weight: lighter;
+	color: $red;
+}
+
+.walk-location {
+	padding-bottom: 10px;
+}
